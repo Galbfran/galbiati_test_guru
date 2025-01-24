@@ -1,50 +1,119 @@
+# Franco Galbiati Test Guru
+```
+Dev: Franco Galbiati
+position: Full Stack Developer
+tel: +54-11-6227-1014
+email: francogalbiati984@gmail.com
+```
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+import to github
+```
+https://github.com/Galbfran/galbiati_test_guru.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+execute
 ```
+npm install
+```
+
+add .env
+```
+VITE_SEND_SUBSCRIBE_URL=
+```
+
+execute
+```
+npm run dev
+```
+
+#Page TestPage
+```
+Loading global state: Get isLoading and isSuccess from the useLoaderStore context.
+
+Rendering conditions:
+
+1. If isLoading is true, <Loader /> is displayed.
+
+2. If isLoading is false and isSuccess is also false, <SuscribeSection /> is displayed.
+
+3. If isLoading is false and isSuccess is true, <SubcribeSucces /> is displayed.
+
+Footer: The rightsReserved text is rendered using the <Span /> component.
+```
+
+# Project File Structure
+This project is organized using a modular structure to keep the code clean and maintainable. Below is a breakdown of the key directories and their roles:
+
+1️⃣ assets/
+```
+Stores static assets like SVG icons.
+Files:
+message_icon.svg: Likely an icon for messages.
+react.svg: React logo or related icon.
+```
+
+2️⃣ components/
+```
+Contains reusable UI components.
+Files:
+Button.tsx: Custom button component.
+Icon.tsx: Component for rendering icons.
+Input.tsx: Custom input field component.
+Loader.tsx: Displays a loading animation.
+Span.tsx: Likely a wrapper for inline text styling.
+SubcribeSucces.tsx: Displays a success message after subscribing.
+SuscribeSection.tsx: Contains the subscription form.
+Title.tsx: A title component for headings.
+```
+
+3️⃣ helpers/
+```
+Contains utility/helper functions used across the app.
+Files:
+fetchEmail.ts: Handles email subscription API requests.
+rightsReserved.ts: Contains copyright or legal text.
+validateEmail.ts: Function to validate email addresses.
+```
+
+4️⃣ hooks/
+```
+Contains custom React hooks for managing logic.
+Files:
+useSuscribe.tsx: Likely handles subscription-related logic.
+```
+
+5️⃣ page/
+```
+Contains the main pages of the app.
+Files:
+TestPage.tsx: The main page component that manages the UI flow.
+```
+
+6️⃣ providers/
+```
+Contains state management logic using context or state libraries.
+Files:
+loader_provider.ts: Manages loading state (probably using React Context or Zustand).
+```
+
+7️⃣ Root Files
+```
+App.tsx: The main React component that renders the application.
+App.css, index.css, and main.tsx: Styles and entry point of the app.
+vite-env.d.ts: TypeScript environment configuration for Vite.
+```
+
+
+# 🔹 Summary
+This project is well-structured with a clear separation of concerns:
+
+Reusable UI elements are in the components/ folder.
+Business logic is managed in helpers/ and hooks/.
+State management is in providers/.
+Pages are inside the page/ directory.
+Static assets are inside assets/.
+This modular approach improves scalability, maintainability, and readability. 🚀
+
+Let me know if you need more details! 😊
+

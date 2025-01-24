@@ -5,26 +5,26 @@ interface ResponseEmail {
 }
 
 export default async function fetchEmail(email: string): Promise<boolean> {
-  try {
-    const url = "https://api-portafolio-5og3.onrender.com/api/email/subcription";
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+  const url = import.meta.env.VITE_SEND_SUBSCRIBE_URL as string;
 
-      body: JSON.stringify({
-        "email": email,
-      }),
-    });
-    const data: ResponseEmail = await response.json();
-
-    if (data.message === "Email enviado correctamente") {
-      return true;
-    } else {
-      return false
-    }
-  } catch (error) {
+  if (!url) {
     return false;
   }
+
+  const fetchPromise = fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email }),
+  }).then(async (response) => {
+    const data: ResponseEmail = await response.json();
+    return data.message === "Email enviado correctamente";
+  }).catch(() => false);
+
+  const timeoutPromise = new Promise<boolean>((resolve) =>
+    setTimeout(() => resolve(true), 2000)
+  );
+
+  return Promise.race([fetchPromise, timeoutPromise]);
 }

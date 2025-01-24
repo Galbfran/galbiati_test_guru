@@ -1,9 +1,10 @@
 interface Props {
   text: string;
+  onClick: VoidFunction
 }
 
-export default function Button({ text }: Props) {
+export default function Button({ text, onClick }: Props) {
   return (
-    <button className="button">{text.toLocaleUpperCase()}</button>
+    <button className="button" onClick={onClick} >{text.toLocaleUpperCase()}</button>
   )
 }

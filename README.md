@@ -1,7 +1,7 @@
 # Franco Galbiati Test Guru
 ```
-dev: Franco Galbiati
-puesto: Full Stack Developer
+Dev: Franco Galbiati
+position: Full Stack Developer
 tel: +54-11-6227-1014
 email: francogalbiati984@gmail.com
 ```
@@ -29,18 +29,17 @@ npm run dev
 
 #Page TestPage
 ```
-Carga del estado global: Se obtiene isLoading y isSuccess del contexto useLoaderStore.
+Loading global state: Get isLoading and isSuccess from the useLoaderStore context.
 
-Condiciones de renderizado:
+Rendering conditions:
 
-1. Si isLoading es true, se muestra <Loader />.
+1. If isLoading is true, <Loader /> is displayed.
 
-2. Si isLoading es false y isSuccess también es false, se muestra <SuscribeSection />.
+2. If isLoading is false and isSuccess is also false, <SuscribeSection /> is displayed.
 
-3. Si isLoading es false y isSuccess es true, se muestra <SubcribeSucces />.
+3. If isLoading is false and isSuccess is true, <SubcribeSucces /> is displayed.
 
-Pie de página: Se renderiza el texto rightsReserved usando el componente <Span />.
+Footer: The rightsReserved text is rendered using the <Span /> component.
 ```
-
 
 

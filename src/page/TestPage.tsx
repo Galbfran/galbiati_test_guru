@@ -2,7 +2,7 @@ import Loader from "../components/Loader";
 import Span from "../components/Span";
 import SubcribeSucces from "../components/SubcribeSucces";
 import SuscribeSection from "../components/SuscribeSection";
-import { rightsReserved } from "../const/rightsReserved";
+import { rightsReserved } from "../helpers/rightsReserved";
 import { useLoaderStore } from "../providers/loader_provider";
 
 export default function TestPage() {

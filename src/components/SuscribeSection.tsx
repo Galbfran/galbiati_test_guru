@@ -4,35 +4,11 @@ import Icon from "./Icon";
 import Title from "./Title";
 import Input from "./Input";
 import Button from "./Button";
-import { useState } from "react";
-import validateEmail from "../const/validateEmail";
-import fetchEmail from "../const/fetchEmail";
-import { useLoaderStore } from "../providers/loader_provider";
+import validateEmail from "../helpers/validateEmail";
+import useSuscribe from "../hooks/useSuscribe";
 
 export default function SuscribeSection() {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-  const { setLoading, setSuccess } = useLoaderStore();
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setEmail(e.target.value);
-    if (validateEmail(e.target.value)) {
-      setError("");
-    } else {
-      setError("Please enter a valid email.");
-    }
-  };
-
-  const Submit = async (): Promise<void> => {
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email.");
-      return;
-    }
-    setLoading(true);
-    const result = await fetchEmail(email);
-    console.log(result);
-    setLoading(false);
-    setSuccess(result);
-  };
+  const { error, onChange, Submit } = useSuscribe();
 
   return (
     <section className="container">

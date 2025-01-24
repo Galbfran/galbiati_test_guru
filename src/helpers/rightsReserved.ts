@@ -1,0 +1,1 @@
+export const rightsReserved = "© 2025 Subscribe Form. All Rigths Reserved. Design by EquipoDotGuru."

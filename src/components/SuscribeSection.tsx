@@ -12,7 +12,7 @@ export default function SuscribeSection() {
 
   return (
     <section className="container">
-      <Icon src="public/assets/message_icon.svg" alt="logo" width={58} height={58} />
+      <Icon src="public/assets/message_image.png" alt="logo" width={58} height={58} />
       <Title title="subscribe" />
       <Input
         type="email"

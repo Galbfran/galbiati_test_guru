@@ -10,7 +10,7 @@ export default function SubcribeSucces() {
   }
   return (
     <section className="container">
-      <Icon src="./src/assets/message_image.png" alt="logo" width={58} height={58} />
+      <Icon src="public/assets/message_icon.svg" alt="logo" width={58} height={58} />
       <Title title="subscribe" />
       <span >You have been successfully subscribed.</span>
       <Button text="close" onClick={toSuscribe} />

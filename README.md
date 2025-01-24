@@ -1,50 +1,46 @@
+# Franco Galbiati Test Guru
+```
+dev: Franco Galbiati
+puesto: Full Stack Developer
+tel: +54-11-6227-1014
+email: francogalbiati984@gmail.com
+```
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+import to github
+```
+https://github.com/Galbfran/galbiati_test_guru.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+execute
 ```
+npm install
+```
+
+add .env
+```
+VITE_SEND_SUBSCRIBE_URL=
+```
+
+execute
+```
+npm run dev
+```
+
+#Page TestPage
+```
+Carga del estado global: Se obtiene isLoading y isSuccess del contexto useLoaderStore.
+
+Condiciones de renderizado:
+
+1. Si isLoading es true, se muestra <Loader />.
+
+2. Si isLoading es false y isSuccess también es false, se muestra <SuscribeSection />.
+
+3. Si isLoading es false y isSuccess es true, se muestra <SubcribeSucces />.
+
+Pie de página: Se renderiza el texto rightsReserved usando el componente <Span />.
+```
+
+
+

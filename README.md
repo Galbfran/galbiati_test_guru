@@ -5,6 +5,15 @@ position: Full Stack Developer
 tel: +54-11-6227-1014
 email: francogalbiati984@gmail.com
 ```
+# Deploy
+execute
+```
+rm -rf dist
+npm run build
+npm run deploy
+```
+
+
 # React + TypeScript + Vite
 
 import to github

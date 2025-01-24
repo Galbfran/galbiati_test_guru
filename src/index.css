@@ -131,6 +131,15 @@ body {
   text-align: center;
 }
 
+.section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+}
+
 @media (max-width: 720px) {
   .container {
     margin: 10px;

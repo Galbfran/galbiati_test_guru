@@ -9,9 +9,15 @@ export default function TestPage() {
   const { isLoading, isSuccess } = useLoaderStore();
   return (
     <main className="main">
-      {isLoading && <Loader />}
-      {!isLoading && (!isSuccess) && <SuscribeSection />}
-      {!isLoading && (isSuccess) && <SubcribeSucces />}
+      <div className={`section ${isLoading ? 'visible' : ''}`}>
+        {isLoading && <Loader />}
+      </div>
+      <div className={`section ${(!isLoading && !isSuccess) ? 'visible' : ''}`}>
+        {!isLoading && !isSuccess && <SuscribeSection />}
+      </div>
+      <div className={`section ${(!isLoading && isSuccess) ? 'visible' : ''}`}>
+        {!isLoading && isSuccess && <SubcribeSucces />}
+      </div>
       <Span text={rightsReserved} />
     </main>
   );
